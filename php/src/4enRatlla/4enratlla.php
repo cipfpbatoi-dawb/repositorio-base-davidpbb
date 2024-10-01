@@ -29,18 +29,15 @@
 
 $graella = inicialitzarGraella();
 
-pintarGraella($graella);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    echo "<body></body>";
 
     ferMoviment($graella, $_POST['columna'], $_POST['ficha']);
 
     pintarGraella($graella);
 
     
-}
+} else {pintarGraella($graella);}
 
 
 
